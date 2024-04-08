@@ -1,4 +1,4 @@
-import { useFetchData } from "../hooks/useFetch"
+import { useFetch } from "../hooks/useFetch"
 import dice from "../assets/dice.png"
 import { charaList } from "../data/charaList"
 import { useState } from "react"
@@ -13,7 +13,7 @@ export const FetchButtom = () => {
         setChara(azar)
     }
 
-    const { data } = useFetchData({ hero_key: charaList[chara] });
+    const { data } = useFetch({ hero_key: charaList[chara] });
 
     return (
         <Section>
@@ -26,7 +26,7 @@ export const FetchButtom = () => {
             </div>
 
             <div className={`${chara == null && "hidden"}`}>
-                <h3 className="font-semibold text-slate-600 underline mb-2">{"Nombre: " + data.name}</h3>
+                <h3 className="font-semibold text-slate-600 mb-2"><span className="underline">Nombre:</span> {data.name}</h3>
 
                 <div className="flex gap-5">
                     <img src={data.portrait} alt={data.name} className="border-white border-2 rounded-md" />

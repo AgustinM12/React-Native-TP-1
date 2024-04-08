@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export const useFetchData = ({ hero_key }) => {
+export const useFetch = ({ hero_key }) => {
     const [data, setData] = useState({}); 
 
     const findRandomCharacter = async () => {

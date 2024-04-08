@@ -1,4 +1,4 @@
-import { Counter } from "./reducer/countReducer";
+import { Counter } from "./components/countReducer";
 import { ThemeButtom } from "./components/ThemeButtom";
 import { FetchButtom } from "./components/FetchButtom";
 import { useContext } from "react";

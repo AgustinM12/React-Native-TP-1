@@ -1,6 +1,6 @@
 import { useReducer } from "react";
-import { Buttom } from "../components/Buttom";
-import { Section } from "../components/Section";
+import { Buttom } from "./Buttom";
+import { Section } from "./Section";
 
 const initialState = {
     count: 0
