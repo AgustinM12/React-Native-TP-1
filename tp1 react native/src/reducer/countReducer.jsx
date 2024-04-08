@@ -1,4 +1,5 @@
 import { useReducer } from "react";
+import { Buttom } from "../components/Buttom";
 
 const initialState = {
     count: 0
@@ -21,18 +22,16 @@ export const Counter = () => {
     const [state, dispatch] = useReducer(countReducer, initialState)
 
     return (
-        <div className="flex flex-col justify-center items-center border-2 border-white space-y-4 p-10 m-10 bg-slate-400 rounded-md">
+        <section className="flex flex-col justify-center items-center border-2 border-white space-y-4 p-10 m-10 bg-slate-400 rounded-md">
 
-            <h2 className="text-center font-bold">Contador: {state.count}</h2>
+            <h2 className="text-center font-bold underline animate-pulse">useReducer Section</h2>
 
-            <button className="p-2 rounded-md bg-blue-500 text-white w-64" 
-            onClick={() => dispatch({ type: 'increment' })}>Incrementar +</button>
-            
-            <button className="p-2 rounded-md bg-blue-500 text-white w-64"
-            onClick={() => dispatch({ type: 'decrement' })}>Decrementar -</button>
-            
-            <button className="p-2 rounded-md bg-blue-500 text-white w-64"
-            onClick={() => dispatch({ type: 'reset' })}>Resetear </button>
-        </div>
+            <h3 className="text-center font-bold">Contador: {state.count}</h3>
+
+            <Buttom text="Incrementar +" action={() => dispatch({ type: 'increment' })} />
+            <Buttom text="Decrementar -" action={() => dispatch({ type: 'decrement' })} />
+            <Buttom text="Resetear" action={() => dispatch({ type: 'reset' })} />
+
+        </section>
     )
 }
